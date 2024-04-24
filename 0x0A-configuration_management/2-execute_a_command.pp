@@ -1,5 +1,6 @@
-#!/bin/bash
-while [[ true ]]
-do
-      sleep 2
-done
+# kill process killmenow
+
+exec { 'pkill':
+  command  => 'pkill killmenow',
+  provider => 'shell',
+}
